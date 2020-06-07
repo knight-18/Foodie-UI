@@ -80,6 +80,8 @@
               <i
                 >Beast kind form divide night above let moveth bearing
                 darkness.</i
+              ><br /><i style="opacity: 0;" id="restaurantId"
+                ><%=restaurantId %></i
               >
             </p>
           </div>
@@ -106,24 +108,21 @@
           </div>
         </div>
         <div class="row" id="container">
-          <% [...list["restaurant"].foods].forEach((food)=>{%>
-
-          <div class="col-md-4 col-sm-6">
-            <a href="" style="width: 100%; height: 100%;">
+          <div class="col-md-4 col-sm-6" id="ritem">
+            <a href="vd" style="width: 100%; height: 100%;">
               <div class="single-food">
                 <div class="food-img">
-                  <img src="" class="img-fluid" alt="" />
+                  <img src="wce" class="img-fluid" alt="" />
                 </div>
                 <div class="food-content">
                   <div class="d-flex justify-content-between">
-                    <h5><%=food["foodid"].name%></h5>
-                    <span class="style-change"><%=food.price%></span>
+                    <h5></h5>
+                    <span class="style-change"></span>
                   </div>
                   <p class="pt-3"></p>
                 </div></div
             ></a>
           </div>
-          <%})%>
         </div>
       </div>
     </section>
@@ -222,7 +221,7 @@
     <!-- Footer Area End -->
 
     <!-- Javascript -->
-    <script src="../../js/list_rest.js"></script>
+    <script src="../../js/list_foods.js"></script>
     <script src="../../js/vendor/jquery-2.2.4.min.js"></script>
     <script src="../../js/vendor/bootstrap-4.1.3.min.js"></script>
     <script src="../../js/vendor/wow.min.js"></script>

@@ -80,7 +80,7 @@
               <i
                 >Beast kind form divide night above let moveth bearing
                 darkness.</i
-              >
+              ><br /><i style="opacity: 0;" id="pagenumber"><%=pagenumber %></i>
             </p>
           </div>
         </div>
@@ -92,30 +92,21 @@
     <section class="food-area section-padding">
       <div class="container">
         <div class="row" id="container">
-          <% list.forEach((restaurant)=>{%>
-
-          <div class="col-md-4 col-sm-6">
-            <a
-              href="/<%=restaurant.name%>/<%=restaurant.id%>"
-              style="width: 100%; height: 100%;"
-            >
+          <div class="col-md-4 col-sm-6" id="ritem">
+            <a href="vd" style="width: 100%; height: 100%;">
               <div class="single-food">
                 <div class="food-img">
-                  <img src="<%=restaurant.image%>" class="img-fluid" alt="" />
+                  <img src="wce" class="img-fluid" alt="" />
                 </div>
                 <div class="food-content">
                   <div class="d-flex justify-content-between">
-                    <h5><%=restaurant.name%></h5>
-                    <span class="style-change">$14.50</span>
+                    <h5></h5>
+                    <span class="style-change"></span>
                   </div>
-                  <p class="pt-3">
-                    <!-- <%=restaurant.address%> -->
-                  </p>
-                </div>
-              </div></a
-            >
+                  <p class="pt-3"></p>
+                </div></div
+            ></a>
           </div>
-          <%})%>
         </div>
       </div>
     </section>

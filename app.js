@@ -8,45 +8,14 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 
 app.get("/restaurant/:pg", function (req, res) {
-  var url =
-    "https://knight-foodji.herokuapp.com/api/restaurant?pageNo=" +
-    req.params.pg +
-    "&size=10";
-
-  request(
-    {
-      url: url,
-      json: true,
-    },
-
-    function (error, response, body) {
-      var ar = [];
-      ar = body;
-
-      res.render("restaurant.ejs", { list: ar });
-    }
-  );
+  res.render("restaurant.ejs", { pagenumber: req.params.pg });
 });
 
-app.get("/:restaurantname/:id/", function (req, res) {
-  var url =
-    "https://knight-foodji.herokuapp.com/api/restaurant/" + req.params.id;
-  var rname = req.params.restaurantname;
-  request(
-    {
-      url: url,
-      json: true,
-    },
-
-    function (error, response, body) {
-      var foodlist = [];
-      foodlist = body;
-      res.render("foodItems.ejs", {
-        list: foodlist,
-        restaurantName: rname,
-      });
-    }
-  );
+app.get("/:restaurantname/:id", function (req, res) {
+  res.render("foodItems.ejs", {
+    restaurantName: req.params.restaurantname,
+    restaurantId: req.params.id,
+  });
 });
 
 app.get("/profile", function (req, res) {
