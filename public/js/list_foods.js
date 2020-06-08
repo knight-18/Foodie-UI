@@ -1,4 +1,5 @@
 var container = document.querySelector("#ritem");
+var loader = document.querySelector(".preloader");
 var containerBig = document.getElementById("container");
 var restaurantId = document.getElementById("restaurantId").innerText;
 var url = "https://knight-foodji.herokuapp.com/api/restaurant/" + restaurantId;
@@ -45,5 +46,6 @@ fetch(url, {
     });
   })
   .then((_) => {
+    loader.remove();
     containerBig.removeChild(containerBig.childNodes[1]);
   });

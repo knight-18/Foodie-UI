@@ -18,8 +18,12 @@ app.get("/:restaurantname/:id", function (req, res) {
   });
 });
 
-app.get("/profile", function (req, res) {
-  res.render("profile.ejs");
+app.get("/user_profile", function (req, res) {
+  res.render("user_profile.ejs");
+});
+
+app.get("/delivery_guy_profile", function (req, res) {
+  res.render("delivery_profile.ejs");
 });
 
 app.listen(process.env.PORT || 3000, function () {
